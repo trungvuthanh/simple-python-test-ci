@@ -8,3 +8,8 @@ class Rectangle:
 
     def get_perimeter(self):
         return (self.long + self.short) * 2
+
+
+if __name__ == "__main__":
+    print(Rectangle(1, 2).get_area())
+    print(Rectangle(1, 2).get_perimeter())
