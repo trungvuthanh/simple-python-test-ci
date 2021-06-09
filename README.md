@@ -1,1 +1,1 @@
-# simple-python-test-ci
+# Simple python app for testing CI/CD
