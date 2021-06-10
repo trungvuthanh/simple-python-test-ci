@@ -1,13 +1,19 @@
 pipeline {
     agent any
+
     stages {
-        stage('test') {
+        stage('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/trungvuthanh/simple-python-test-ci.git'
-                sh "pip install poetry"
-                sh "poetry install"
-                sh "poetry run pytest"
-                echo 'testing application...'
+                bat 'python main.py'
+                echo 'Building application...'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                bat 'python main.py'
+                echo 'Testing application...'
             }
         }
     }
