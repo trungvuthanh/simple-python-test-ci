@@ -7,4 +7,4 @@ def test_get_area():
 
 
 def test_get_perimeter():
-    assert Rectangle(6, 9).get_perimeter() == 30
+    assert Rectangle(6, 9).get_perimeter() == 25
