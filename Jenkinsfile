@@ -1,8 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3.8.5' } }
+    agent any
     stages {
         stage('build') {
             steps {
+                git branch: 'main', url: 'https://github.com/trungvuthanh/simple-python-test-ci.git'
                 sh 'python main.py'
                 echo 'building application...'
             }
